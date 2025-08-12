@@ -78,6 +78,7 @@ A comprehensive PHP Laravel application for managing warehouse inventory with re
 ## Development
 
 ### Frontend Development
+
 ```bash
 # Start Vite dev server with hot reload
 npm run dev
@@ -90,6 +91,7 @@ npm run watch
 ```
 
 ### Vue.js Component Structure
+
 ```
 resources/js/components/
 ├── Dashboard.vue          # Dashboard overview
@@ -129,6 +131,7 @@ resources/js/components/
 ## Key Features
 
 ### Dashboard
+
 -   Real-time statistics and metrics
 -   Recent transactions overview
 -   Low stock alerts
@@ -136,6 +139,7 @@ resources/js/components/
 -   Interactive Vue.js components with real-time data updates
 
 ### Vue.js Components
+
 -   **Dashboard**: Real-time statistics and activity feeds
 -   **ProductManager**: Complete CRUD operations with search, filter, and pagination
 -   **InventoryManager**: Stock operations with transaction history
@@ -177,6 +181,7 @@ resources/js/components/
 The system provides RESTful API endpoints for all major operations:
 
 ### Web Routes
+
 -   `GET /dashboard` - Dashboard overview
 -   `GET /products` - Product listing
 -   `POST /products` - Create product
@@ -189,6 +194,7 @@ The system provides RESTful API endpoints for all major operations:
 -   `GET /reports` - Report generation
 
 ### API Routes (for Vue.js components)
+
 -   `GET /api/dashboard/stats` - Dashboard statistics
 -   `GET /api/dashboard/transactions` - Recent transactions
 -   `GET /api/dashboard/alerts` - Recent alerts
@@ -204,18 +210,20 @@ The system provides RESTful API endpoints for all major operations:
 ## Architecture
 
 ### Frontend Architecture
-- **Vue.js 3 Composition API**: Modern reactive components
-- **Component-Based Design**: Modular, reusable components
-- **Real-time Updates**: Live data synchronization with backend
-- **Responsive Design**: Mobile-first approach with Bootstrap 5
-- **State Management**: Local component state with reactive data
+
+-   **Vue.js 3 Composition API**: Modern reactive components
+-   **Component-Based Design**: Modular, reusable components
+-   **Real-time Updates**: Live data synchronization with backend
+-   **Responsive Design**: Mobile-first approach with Bootstrap 5
+-   **State Management**: Local component state with reactive data
 
 ### Responsive Features
-- **Mobile-First Design**: Optimized for all screen sizes
-- **Flexible Grid System**: Bootstrap 5 responsive grid
-- **Touch-Friendly Interface**: Mobile-optimized interactions
-- **Adaptive Layouts**: Components that adapt to screen size
-- **Cross-Device Compatibility**: Works on desktop, tablet, and mobile
+
+-   **Mobile-First Design**: Optimized for all screen sizes
+-   **Flexible Grid System**: Bootstrap 5 responsive grid
+-   **Touch-Friendly Interface**: Mobile-optimized interactions
+-   **Adaptive Layouts**: Components that adapt to screen size
+-   **Cross-Device Compatibility**: Works on desktop, tablet, and mobile
 
 ## Contributing
 
