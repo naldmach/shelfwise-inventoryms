@@ -24,15 +24,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Dashboard API routes
-Route::get('/dashboard/stats', function () {
-    return response()->json([
-        'total_products' => \App\Models\Product::count(),
-        'total_categories' => \App\Models\Category::count(),
-        'total_warehouses' => \App\Models\Warehouse::count(),
-        'low_stock_products' => \App\Models\Product::lowStock()->count(),
-    ]);
-});
+// Protected API routes for authenticated users
+Route::middleware('web')->group(function () {
+    // Dashboard API routes
+    Route::get('/dashboard/stats', function () {
+        return response()->json([
+            'total_products' => \App\Models\Product::count(),
+            'total_categories' => \App\Models\Category::count(),
+            'total_warehouses' => \App\Models\Warehouse::count(),
+            'low_stock_products' => \App\Models\Product::lowStock()->count(),
+        ]);
+    });
 
 Route::get('/dashboard/transactions', function () {
     $transactions = \App\Models\InventoryTransaction::with(['product', 'warehouse', 'user'])
@@ -106,4 +108,5 @@ Route::get('/reports', function () {
 Route::get('/reports/{id}', function ($id) {
     $report = \App\Models\Report::findOrFail($id);
     return response()->json($report);
+});
 });

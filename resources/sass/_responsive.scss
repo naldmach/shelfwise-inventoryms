@@ -54,8 +54,8 @@
     }
     
     .navbar-toggler {
-        order: -1;
-        margin-right: 0;
+        order: 1;
+        margin-left: auto;
     }
 }
 
@@ -326,11 +326,11 @@
         border-bottom: none;
     }
     
-    // Ensure hamburger menu is on the left
+    // Ensure hamburger menu is on the right
     .navbar-toggler {
-        order: -1 !important;
+        order: 1 !important;
+        margin-left: auto !important;
         margin-right: 0 !important;
-        margin-left: 0 !important;
     }
     
     // Improve navbar collapse behavior

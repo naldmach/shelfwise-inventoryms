@@ -411,10 +411,15 @@ export default {
   methods: {
     async fetchWarehouses() {
       try {
+        console.log('Fetching warehouses...')
         const response = await fetch('/api/warehouses')
+        console.log('Warehouses response:', response)
         if (response.ok) {
           this.warehouses = await response.json()
+          console.log('Warehouses data:', this.warehouses)
           this.filteredWarehouses = [...this.warehouses]
+        } else {
+          console.error('Warehouses response not ok:', response.status, response.statusText)
         }
       } catch (error) {
         console.error('Error fetching warehouses:', error)

@@ -267,10 +267,15 @@ export default {
   methods: {
     async fetchCategories() {
       try {
+        console.log('Fetching categories...')
         const response = await fetch('/api/categories')
+        console.log('Categories response:', response)
         if (response.ok) {
           this.categories = await response.json()
+          console.log('Categories data:', this.categories)
           this.filteredCategories = [...this.categories]
+        } else {
+          console.error('Categories response not ok:', response.status, response.statusText)
         }
       } catch (error) {
         console.error('Error fetching categories:', error)
